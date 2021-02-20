@@ -57,11 +57,9 @@ class State:
         self.grid[init_pos[0]][init_pos[1]] = "♘"
         self.pos = init_pos
         self.visited_nb = visited_nb
+        self.moves(actions)
         self.actions = actions
-        if(self.actions == None):
-            self.actions = []
-        self.moves(self.actions)
-        self.actions = self.actions.append(init_pos)
+        self.actions.append(init_pos)
 #        self.grid_val = []
 #        for i in range(self.nRows):
 #            self.grid_val.append([])
